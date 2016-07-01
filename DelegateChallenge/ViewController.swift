@@ -8,18 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var postCode: UITextField!
+    
+    // Text Field Delegate objects
+    let postCodeDelegate = PostCodeTextFieldDelegate()
+    
+    // Life Cycle Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.postCode.delegate = postCodeDelegate
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
+    
+    
+    
 }
 
