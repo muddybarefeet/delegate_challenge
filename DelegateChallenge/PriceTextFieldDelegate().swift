@@ -23,7 +23,6 @@ class PriceTextFieldDelegate: NSObject, UITextFieldDelegate {
 ////            set up the string to replace
 //            var newText = textField.text! as NSString
 //            newText = newText.stringByReplacingCharactersInRange(range, withString: string)
-//            print("new text", newText)
 //            
 ////remove the  $ and . and , from the inout text
 //            newText = newText.stringByReplacingOccurrencesOfString("$", withString: "")
@@ -56,12 +55,9 @@ class PriceTextFieldDelegate: NSObject, UITextFieldDelegate {
                 digitText.append(element)
             }
         }
-        print("digit text",digitText)
 
         //convert string of numbers (pennies) to an int
         if let pennies = Int(digitText){
-            print("pennies", penniesToPennies(pennies))
-            print("dollars", penniesToDollars(pennies))
             newText = "$" + penniesToDollars(pennies) + "." + penniesToPennies(pennies)
         } else {
             newText = "$0.00"
@@ -73,7 +69,6 @@ class PriceTextFieldDelegate: NSObject, UITextFieldDelegate {
     func penniesToDollars(pennies: Int) -> String {
 //        as the input is an Int it will round up to the nearest whole number
         let dollars = pennies / 100
-        print("dollars", dollars)
         return String(dollars)
     }
 
