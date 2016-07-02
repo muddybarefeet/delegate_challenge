@@ -44,16 +44,20 @@ class PriceTextFieldDelegate: NSObject, UITextFieldDelegate {
         
         var newText = textField.text! as NSString
         let text = newText.stringByReplacingCharactersInRange(range, withString: string)
-        //get a string containing only the numbers
+        //digits is a set of UNICODE values that relate to digits 0-9 (allowed values)
         let digits = NSCharacterSet.decimalDigitCharacterSet()
 
+        
         var digitText = ""
+//        for all the UNICODE values in the input (text.unicodeScalars)
         for element in text.unicodeScalars {
+//            if the UNICODE char is in the set of numbers in digit then add it to the digitText string
             if (digits.longCharacterIsMember(element.value)) {
                 digitText.append(element)
             }
         }
         print("digit text",digitText)
+
         //convert string of numbers (pennies) to an int
         if let pennies = Int(digitText){
             print("pennies", penniesToPennies(pennies))
@@ -67,7 +71,9 @@ class PriceTextFieldDelegate: NSObject, UITextFieldDelegate {
     }
     
     func penniesToDollars(pennies: Int) -> String {
+//        as the input is an Int it will round up to the nearest whole number
         let dollars = pennies / 100
+        print("dollars", dollars)
         return String(dollars)
     }
 
