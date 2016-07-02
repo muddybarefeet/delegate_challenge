@@ -25,9 +25,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        amount.text = "$00.00"
+        
+        postCode.clearButtonMode = UITextFieldViewMode.Always
+        amount.clearButtonMode = UITextFieldViewMode.Always
+        restricted.clearButtonMode = UITextFieldViewMode.Always
+        
         postCode.delegate = postCodeDelegate
         amount.delegate = priceDelegate
         restricted.delegate = restrictedDelegate
+
     }
     
     @IBAction func switchChanged(sender: AnyObject) {

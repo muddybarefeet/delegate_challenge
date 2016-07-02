@@ -14,7 +14,6 @@ class RestrictedTextFieldDelegate: NSObject, UITextFieldDelegate {
     var switchOn = true
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        print("fn")
         if switchOn == true {
             return true
         } else {

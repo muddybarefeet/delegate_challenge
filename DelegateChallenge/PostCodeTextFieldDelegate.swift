@@ -16,10 +16,11 @@ class PostCodeTextFieldDelegate: NSObject, UITextFieldDelegate {
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
         var newText: NSString
+        
         // Construct the text that will be in the field if this change is accepted
         newText = textField.text!
         newText = newText.stringByReplacingCharactersInRange(range, withString: string)
-        print("new text", newText)
+        
         if newText.length > 5 {
             return false
         }
@@ -27,12 +28,12 @@ class PostCodeTextFieldDelegate: NSObject, UITextFieldDelegate {
 //        then we check to see if it is a number
         if Int((newText as String)) != nil {
             print("valid number")
+        } else if newText == "" {
+            print("The backspace was pressed and now there is nothing in the text")
         } else {
-            print("not valid number")
-            newText = ""
+            return false
         }
         
-//        then see if it contains anything that is not a number
         return true
     }
     
