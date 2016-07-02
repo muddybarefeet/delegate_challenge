@@ -33,7 +33,6 @@ class PostCodeTextFieldDelegate: NSObject, UITextFieldDelegate {
         }
         
 //        then see if it contains anything that is not a number
-        
         return true
     }
     

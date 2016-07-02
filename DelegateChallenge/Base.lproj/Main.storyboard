@@ -28,7 +28,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ne6-8K-Dzq">
                                 <rect key="frame" x="27" y="118" width="268" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sn3-VS-JjZ">
                                 <rect key="frame" x="27" y="175" width="211" height="30"/>
@@ -37,6 +37,9 @@
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLz-Yo-RKG">
                                 <rect key="frame" x="246" y="174" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="osP-R6-hrq"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.59790762687134447" green="0.73834752599758313" blue="0.83683736910994766" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,7 +57,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="amount" destination="ne6-8K-Dzq" id="JmR-JH-z9x"/>
                         <outlet property="postCode" destination="mPQ-QA-ucW" id="pbF-Ww-e89"/>
+                        <outlet property="restrictSwitch" destination="QLz-Yo-RKG" id="EYU-c1-ASd"/>
+                        <outlet property="restricted" destination="sn3-VS-JjZ" id="RjV-vf-Bml"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

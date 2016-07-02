@@ -13,6 +13,8 @@
 		95AA11BC1D272D5F00E8F0A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95AA11BB1D272D5F00E8F0A9 /* Assets.xcassets */; };
 		95AA11BF1D272D5F00E8F0A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95AA11BD1D272D5F00E8F0A9 /* LaunchScreen.storyboard */; };
 		95AA11C81D27313800E8F0A9 /* PostCodeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AA11C71D27313800E8F0A9 /* PostCodeTextFieldDelegate.swift */; };
+		95AA11CA1D27392700E8F0A9 /* PriceTextFieldDelegate().swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AA11C91D27392700E8F0A9 /* PriceTextFieldDelegate().swift */; };
+		95AA11CC1D27408E00E8F0A9 /* RestrictedTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AA11CB1D27408E00E8F0A9 /* RestrictedTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		95AA11BE1D272D5F00E8F0A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95AA11C01D272D5F00E8F0A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95AA11C71D27313800E8F0A9 /* PostCodeTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCodeTextFieldDelegate.swift; sourceTree = "<group>"; };
+		95AA11C91D27392700E8F0A9 /* PriceTextFieldDelegate().swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PriceTextFieldDelegate().swift"; sourceTree = "<group>"; };
+		95AA11CB1D27408E00E8F0A9 /* RestrictedTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestrictedTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				95AA11C71D27313800E8F0A9 /* PostCodeTextFieldDelegate.swift */,
+				95AA11C91D27392700E8F0A9 /* PriceTextFieldDelegate().swift */,
+				95AA11CB1D27408E00E8F0A9 /* RestrictedTextFieldDelegate.swift */,
 			);
 			name = "Text Field Delegate";
 			sourceTree = "<group>";
@@ -146,7 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95AA11CC1D27408E00E8F0A9 /* RestrictedTextFieldDelegate.swift in Sources */,
 				95AA11B71D272D5F00E8F0A9 /* ViewController.swift in Sources */,
+				95AA11CA1D27392700E8F0A9 /* PriceTextFieldDelegate().swift in Sources */,
 				95AA11B51D272D5F00E8F0A9 /* AppDelegate.swift in Sources */,
 				95AA11C81D27313800E8F0A9 /* PostCodeTextFieldDelegate.swift in Sources */,
 			);
