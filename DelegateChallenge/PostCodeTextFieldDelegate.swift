@@ -29,7 +29,7 @@ class PostCodeTextFieldDelegate: NSObject, UITextFieldDelegate {
             print("valid number")
         } else {
             print("not valid number")
-            return false
+            newText = ""
         }
         
 //        then see if it contains anything that is not a number
